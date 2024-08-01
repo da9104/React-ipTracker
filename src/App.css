@@ -21,3 +21,9 @@
   /* filter: blur(2px); */
   /* filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EBF4F5", endColorstr="#B5C6E0", GradientType=1 ); */
 }
+
+.main h3 {
+  font-weight: 600;
+  font: bold;
+  text-transform: uppercase;
+}

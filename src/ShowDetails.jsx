@@ -16,28 +16,28 @@ export default function ShowDetails({ ip, location }) {
          > 
          {/* backdropFilter: "blur(5px)" */}
         <Card variant="outlined" sx={{ display: 'flex', padding: 3  }}>
-        <Box sx={{ p: 2, fontSize: 9, textTransform: 'uppercase' }}>
+        <Box sx={{ p: 2, fontSize: 9, fontWeight: 'bold', textTransform: 'uppercase' }}>
          
-            <Typography  component="div">
+            <Typography component="div">
             IP Address
             </Typography>
     
           <Typography color="text.secondary" variant="body2">
-          {ip.ip}   {ip.isp}
+          {ip.ip} {ip.isp}
           </Typography>
         </Box>
         <Divider orientation="vertical" variant="middle"  flexItem  />
-        <Box sx={{ p: 2, fontSize: 9, textTransform: 'uppercase' }}>
+        <Box sx={{ p: 2, fontSize: 9, fontWeight: 'bold', textTransform: 'uppercase' }}>
           <Stack direction="column" spacing={1}>
           <Typography  component="div">
             Location
          </Typography> 
-         {location.city}
+         {location.city} <br/>
          {location.country}
           </Stack>
         </Box>
         <Divider orientation="vertical" variant="middle" flexItem />
-        <Box sx={{ p: 2, fontSize: 9, textTransform: 'uppercase' }}>
+        <Box sx={{ p: 2, fontSize: 9, fontWeight: 'bold', textTransform: 'uppercase' }}>
         <Typography component="div">
             Timezone
             </Typography>

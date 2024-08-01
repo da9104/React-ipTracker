@@ -18,7 +18,7 @@ const Mapping = ({ ip, lat, lng }) => {
     const longitude = lng 
  
     return ( 
-      <Box style={{ position: "relative", top: "-130px", zIndex: '-1' }}>
+      <Box style={{ position: "relative", top: "-135px", zIndex: '-1' }}>
         <MapContainer 
         center={[latitude, longitude]} 
         zoom={13} 

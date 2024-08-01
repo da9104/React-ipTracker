@@ -6,13 +6,13 @@ import Mapping from './Mapping'
 import './App.css'
 
 function App() {
-  const [loading, setLoading] = useState(false)
   const [ip, setIp] = useState([])
   const [location, setLocation] = useState([])
   const [lat, setLat] = useState()
   const [lng, setLng] = useState()
   const [error, setError] = useState(null)
-
+  const [loading, setLoading] = useState(false)
+  
 
   useEffect(() => {
     return () => {
@@ -51,14 +51,12 @@ function App() {
           <h3>IP address Tracker</h3>
            <SearchBar  onSubmit={handleSubmit} /> 
           </div>
-          <ShowDetails loading={loading} ip={ip} location={location} />
-          {lat? (<Mapping ip={ip} lat={lat} lng={lng} />) : (null)}
-           {/* {loading? (<div className='text-blue-700 font-extrabold'> Loading... </div>)
+           {loading? (<div className='text-blue-700 font-extrabold'> Loading... </div>)
           : (<>
             <ShowDetails loading={loading} ip={ip} location={location} />
             {lat? (<Mapping ip={ip} lat={lat} lng={lng} />) : (null)}
             </>
-            )} */}
+            )}
     </div>
   )
 }
