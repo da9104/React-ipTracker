@@ -13,8 +13,11 @@
 
 .main {
   width: 100vw;
-  /* background-color: aquamarine; */
   padding-top: 100px;
   padding-bottom: 100px;
-
+  z-index: -1000;
+  background: url('./assets/v904-nunny-012.jpg');
+  background-size: 80%;
+  /* filter: blur(2px); */
+  /* filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EBF4F5", endColorstr="#B5C6E0", GradientType=1 ); */
 }

@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
-export default function SearchBar({ onSubmit }) {
+export default function SearchBar({ onSubmit, loading }) {
    const [term, setTerm] = useState('')
-  
+   
     const handleChange = (e) => {
         e.preventDefault()
         setTerm(e.target.value)
@@ -14,18 +14,19 @@ export default function SearchBar({ onSubmit }) {
     }
 
     return (
-        <div>
-          <form onSubmit={handleFormSubmit}>
-          {/* Confrim your search: {term} <br/> */}
+        <>
+          <form onSubmit={handleFormSubmit} >
             <input 
             onChange={handleChange}
             placeholder="Search" 
             name="Search"
             id="Search"
             value={term}
+            style={{ padding: '10px', marginRight: '5px', borderRadius: '5px' }}
             />
-          <button >Submit</button>
+          {loading? (<button style={{ backgroundColor: 'black'}} >Submit</button>) :  <button>Submit</button>}
+         
           </form>
-        </div>
+        </>
     )
 }

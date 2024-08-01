@@ -49,17 +49,16 @@ function App() {
     <div>
       <div className='main'>
           <h3>IP address Tracker</h3>
-
-          <SearchBar onSubmit={handleSubmit}/> 
-    
-         {loading? (<div className='text-blue-700 font-extrabold'> Loading... </div>)
+           <SearchBar  onSubmit={handleSubmit} /> 
+          </div>
+          <ShowDetails loading={loading} ip={ip} location={location} />
+          {lat? (<Mapping ip={ip} lat={lat} lng={lng} />) : (null)}
+           {/* {loading? (<div className='text-blue-700 font-extrabold'> Loading... </div>)
           : (<>
-           <ShowDetails ip={ip} location={location} />
+            <ShowDetails loading={loading} ip={ip} location={location} />
             {lat? (<Mapping ip={ip} lat={lat} lng={lng} />) : (null)}
-      
-        </>
-      )}
-       </div>
+            </>
+            )} */}
     </div>
   )
 }

@@ -10,14 +10,15 @@ export default function ShowDetails({ ip, location }) {
         <Stack 
         direction="row" 
         justifyContent="center" 
-        alignItems="center" c
-        lassName='detail--card' 
-        style={{ zIndex: '1300' }} > 
-        {/* backdropFilter: "blur(5px)" */}
-        <Card variant="outlined" sx={{ display: 'flex' }}>
-        <Box sx={{ p: 2 }}>
+        alignItems="center" 
+        className='detail--card' 
+        style={{ position: "relative", top: "-90px",  }}
+         > 
+         {/* backdropFilter: "blur(5px)" */}
+        <Card variant="outlined" sx={{ display: 'flex', padding: 3  }}>
+        <Box sx={{ p: 2, fontSize: 9, textTransform: 'uppercase' }}>
          
-            <Typography gutterBottom variant="h5" component="div">
+            <Typography  component="div">
             IP Address
             </Typography>
     
@@ -26,9 +27,9 @@ export default function ShowDetails({ ip, location }) {
           </Typography>
         </Box>
         <Divider orientation="vertical" variant="middle"  flexItem  />
-        <Box sx={{ p: 2 }}>
+        <Box sx={{ p: 2, fontSize: 9, textTransform: 'uppercase' }}>
           <Stack direction="column" spacing={1}>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography  component="div">
             Location
          </Typography> 
          {location.city}
@@ -36,13 +37,12 @@ export default function ShowDetails({ ip, location }) {
           </Stack>
         </Box>
         <Divider orientation="vertical" variant="middle" flexItem />
-        <Box sx={{ p: 2 }}>
-        <Typography gutterBottom variant="h5" component="div">
+        <Box sx={{ p: 2, fontSize: 9, textTransform: 'uppercase' }}>
+        <Typography component="div">
             Timezone
             </Typography>
         <Typography color="text.secondary" variant="body2">
             {location.timezone} 
-           
           </Typography>
        </Box>
     </Card>
