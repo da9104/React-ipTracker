@@ -1,5 +1,6 @@
 {
   "name": "vite-project",
+  "homepage": "https://github.com/da9104/React-ipTracker",
   "private": true,
   "version": "0.0.0",
   "type": "module",
