@@ -11,6 +11,7 @@ function App() {
   const [location, setLocation] = useState([])
   const [lat, setLat] = useState()
   const [lng, setLng] = useState()
+  const [error, setError] = useState(null)
 
 
   useEffect(() => {
@@ -45,16 +46,21 @@ function App() {
   }
 
   return (
-    <>
-    <h3>IP address Tracker</h3>
-    {loading? (<div className='text-blue-700 font-extrabold'> Loading... </div>)
-     : (<>
-      <SearchBar onSubmit={handleSubmit}/>
-      <ShowDetails ip={ip} location={location}/>
-      {lat? (<Mapping ip={ip} lat={lat} lng={lng} />) : (null)}
-      </>
+    <div>
+      <div className='main'>
+          <h3>IP address Tracker</h3>
+
+          <SearchBar onSubmit={handleSubmit}/> 
+    
+         {loading? (<div className='text-blue-700 font-extrabold'> Loading... </div>)
+          : (<>
+           <ShowDetails ip={ip} location={location} />
+            {lat? (<Mapping ip={ip} lat={lat} lng={lng} />) : (null)}
+      
+        </>
       )}
-    </>
+       </div>
+    </div>
   )
 }
 

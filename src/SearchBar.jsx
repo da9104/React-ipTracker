@@ -17,13 +17,13 @@ export default function SearchBar({ onSubmit }) {
         <div>
           <form onSubmit={handleFormSubmit}>
           {/* Confrim your search: {term} <br/> */}
-          <input 
-          onChange={handleChange}
-          placeholder="Search" 
-          name="Search"
-          id="Search"
-          value={term}
-          />
+            <input 
+            onChange={handleChange}
+            placeholder="Search" 
+            name="Search"
+            id="Search"
+            value={term}
+            />
           <button >Submit</button>
           </form>
         </div>

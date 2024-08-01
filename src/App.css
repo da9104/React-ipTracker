@@ -4,10 +4,17 @@
   text-align: center;
 }
 
-.card {
-  padding: 2em;
+.detail--card {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  z-index: 100 !important;
 }
 
-.read-the-docs {
-  color: #888;
+.main {
+  width: 100vw;
+  /* background-color: aquamarine; */
+  padding-top: 100px;
+  padding-bottom: 100px;
+
 }

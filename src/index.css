@@ -13,11 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-#map { height: 180px; }
-.full-height-map {
-  height: 100vh;
-}
-
 a {
   font-weight: 500;
   color: #646cff;
@@ -28,9 +23,8 @@ a:hover {
 }
 
 body {
+  padding: 0;
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }

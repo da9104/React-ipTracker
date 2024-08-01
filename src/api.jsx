@@ -4,7 +4,6 @@ const searchIp = async (term) => {
  const res = await axios.get(`https://geo.ipify.org/api/v1?apiKey=${import.meta.env.VITE_IP_API_KEY}&ipAddress=${term}`)
       .then(response => {
           return response.data
-        //console.log(response.data)
         })
         .catch(err => {
             console.log("error", err)
