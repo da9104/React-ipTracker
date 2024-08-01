@@ -51,7 +51,7 @@ function App() {
      : (<>
       <SearchBar onSubmit={handleSubmit}/>
       <ShowDetails ip={ip} location={location}/>
-      {lat? (<Mapping lat={lat} lng={lng} />) : (null)}
+      {lat? (<Mapping ip={ip} lat={lat} lng={lng} />) : (null)}
       </>
       )}
     </>
