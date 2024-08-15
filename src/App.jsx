@@ -20,19 +20,6 @@ function App() {
     }
   }, [lat, lng])
 
-  // const getLocation = async (term) => {
-  //   try {
-  //     const result = await searchIp(term)
-  //     // const locationData = result.location;
-  //     // setIp(result)
-  //     // setLocation(locationData)
-  //     // setLat(locationData.lat)
-  //     // setLng(locationData.lng)
-  //   } catch(err) {
-  //     console.log(err)
-  //   }
-  // }
-
   const handleSubmit = async (term) => {
     setLoading(true)
     const result = await searchIp(term)

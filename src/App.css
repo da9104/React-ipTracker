@@ -1,8 +1,8 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
-}
+} */
 
 .detail--card {
   display: flex;
@@ -26,4 +26,5 @@
   font-weight: 600;
   font: bold;
   text-transform: uppercase;
+  text-align: center;
 }
